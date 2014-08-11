@@ -110,6 +110,7 @@ public class VideoFileManager {
 		assert(videoData != null);
 		
 		Path target = getVideoPath(v);
+        v.setLocation(target.toString());
 		Files.copy(videoData, target, StandardCopyOption.REPLACE_EXISTING);
 	}
 	

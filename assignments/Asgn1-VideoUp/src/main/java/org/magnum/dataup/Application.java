@@ -62,4 +62,19 @@ public class Application {
 		return factory.createMultipartConfig();
 	}
 
+    @Bean
+    public VideoRepository videoRepository(){
+        return new VideoRepositoryImpl();
+    }
+
+    @Bean
+    public VideoFileManager videoFileManager(){
+        try{
+            return VideoFileManager.get();
+        } catch (Exception e){
+            return null;
+        }
+    }
+
+
 }

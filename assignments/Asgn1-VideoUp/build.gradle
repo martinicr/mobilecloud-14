@@ -5,6 +5,7 @@ buildscript {
 	}
     repositories {
         maven { url "http://repo.spring.io/libs-snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
         mavenLocal()
     }
     dependencies {
